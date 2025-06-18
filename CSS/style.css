@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  color: #352e28;
+  line-height: 60px;
+  font-weight: 500;
+}
+.expanding-heading {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expanding-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+.expanding-heading:hover::after {
+  height: 70%;
+}
+h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.gradient-text {
+  background: linear-gradient(
+    92deg,
+    rgba(92, 175, 108, 1) 12%,
+    rgba(179, 172, 73, 1) 85%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.special-text {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+button {
+  font-family: "PT Sans Caption", sans-serif;
+  color: white;
+  background-color: #bb4120;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 48px;
+}
+.dotted-border {
+  border-top: 2px dotted #000; /* Top dotted border */
+  border-bottom: 2px dotted #000; /* Bottom dotted border */
+}

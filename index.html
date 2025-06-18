@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+  </head>
+  <body class="p-5">
+    <div class="heading">
+      <h1 class="text-center expanding-heading">Bookmarker</h1>
+    </div>
+    <br />
+    <div class="container dotted-border mb-4 mt-4 p-3">
+      <h2 class="text-center gradient-text mt-4">
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <div class="container">
+        <div class="mb-2 fw-semibold special-text">
+          <label for="bookmarkName"
+            ><i class="fa-solid fa-book-bookmark mx-1"></i> Site Name</label
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            id="bookmarkName"
+            name="bookmarkName"
+            placeholder="Bookmark Name"
+            class="mb-3 form-control" />
+        </div>
+        <div class="mb-2 fw-semibold special-text">
+          <label for="siteUrl"
+            ><i class="fa-solid fa-link mx-1"></i> Site URL</label
+          >
+        </div>
+        <div>
+          <input
+            type="url"
+            name="siteUrl"
+            id="siteUrl"
+            placeholder="Website URL"
+            class="mb-3 form-control" />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="mb-3" onclick="addWebsite()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tBody">
+          <!-- Bookmarks will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
